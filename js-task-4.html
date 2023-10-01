@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Task-4</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <button class="btn btn-primary" id="showdate" onclick="showDate()">Show Date</button>
+            <p class="mt-2" id="date-result"></p>
+            <button class="btn btn-success" id="showtime" onclick="showTime()">Show Time</button>
+            <p class="mt-2" id="time-result"></p>
+        </div>
+    </div>
+
+    <script>
+        function showDate() {
+            let date = new Date();
+            const months = [
+                "January", "February",
+                "March", "April", "May",
+                "June", "July", "August",
+                "September", "October",
+                "November", "December"
+            ];
+            document.getElementById("date-result").innerHTML = date.getDate() + "/" + months[date.getMonth()] + "/" + date.getFullYear();
+        }
+
+        function showTime() {
+            let date = new Date();
+            document.getElementById("time-result").innerHTML = date;
+        }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
